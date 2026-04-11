@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: gray;
+            padding: 45px;
+            display: flex;
+        }
+
+        .card {
+            background-color: white;
+            width: 194px;
+            padding: 0 0  34px 0;
+            border-radius: 7px;
+        }
+
+        .image {
+            padding: 5px;
+        }
+
+        .image img {
+            border-radius: 8px;
+        }
+
+        .content {
+            padding: 13px;
+
+            /* .baloo-bhaijaan-2-<uniquifier> {
+                font-family: "Baloo Bhaijaan 2", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            } */
+        }
+
+        .content p {
+            font-size: 13px;
+            color: gray;
+
+        }
+
+        .capsules span {
+            border: 1px solid gray;
+            padding: 0px 6px;
+            border-radius: 7px;
+            font-size: 8px;
+        }
+
+        .capsules {
+            padding: 0 34px 0 14px;
+        }
+        .button{
+            text-align: center;
+        }
+        .button button{
+            padding:  7px 9px;
+            border-radius: 15px;
+            background-color: rgb(194, 217, 227);
+            color: rgb(7, 171, 236);
+            font-size: 10px;
+            margin-top: 3px;
+            bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+
+        <div class="image">
+            <img src="card.jpg" width="188">
+        </div>
+
+        <div class="capsules">
+            <span>Nature</span>
+            <span>Lake</span>
+        </div>
+        <div class="content">
+            <h2>Shaijaan</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id minima ipsum quisquam nulla cumque? Quae
+                nulla rerum enim, reiciendis dolor beatae sequi consequuntur?</p>
+        </div>
+
+        <div class="button">
+            <button>Read More</button>
+        </div>
+
+    </div>
+    
+</body>
+
+</html>
