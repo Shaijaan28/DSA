@@ -1,0 +1,6 @@
+tup = (23,5,7,8)
+print(type(tup))
+print(tup[0])
+tup=(1,)
+print(tup[1:3])
+print(tup.count(2))

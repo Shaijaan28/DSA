@@ -1,4 +1,3 @@
-
 print("shaijaan")
 name = "rauf"
 age = 23

@@ -1,5 +1,8 @@
 #include<iostream>
 #include<set>
+// set is an associative container 
+// that stores unique elements
+//  in a sorted order
 using namespace std;
 int main (){
     set<int> s;
