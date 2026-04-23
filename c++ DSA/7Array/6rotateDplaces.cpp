@@ -1,17 +1,29 @@
 #include<bits/stdc++.h>
 using namespace std;
-void leftRotate(int arr[], int n , int d){
-    d =d %n;
-    int temp[d];
-    for(int i =0;i<d; i++){
-        temp[i]=arr[i];
-    }
-    for(int i=d; i<n; i++){
-        arr[i-d]=arr[i];
-    }
-    for(int i = n-d; i<n ;i++){
-        arr[i]= temp [i-(n-d)];
-    }
+// void leftRotate(int arr[], int n , int d){
+//     d =d %n;
+//     int temp[d];
+//     for(int i =0;i<d; i++){
+//         temp[i]=arr[i];
+//     }
+//     for(int i=d; i<n; i++){
+//         arr[i-d]=arr[i];
+//     }
+//     for(int i = n-d; i<n ;i++){
+//         arr[i]= temp [i-(n-d)];
+//     }
+// }
+
+//uptimal approach
+// void leftRotate(int arr[] , int n , int d){
+//     reverse(arr, arr+d);
+//     reverse(arr+d, arr+n);
+//     reverse(arr, arr+n);
+// }
+void rightRotate(int arr[] , int n , int d){
+    reverse(arr, arr + (n-d));
+    reverse(arr +(n-d), arr+n);
+    reverse(arr, arr+n);
 }
 int main (){
     int n ;
@@ -22,6 +34,7 @@ int main (){
     }
     int d;
     cin >> d;
+    rightRotate(arr, n,d);
     for(int i=0; i<n ;i++){
         cout << arr[i] << " ";
     }
