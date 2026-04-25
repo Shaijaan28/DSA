@@ -5,9 +5,9 @@ int main (){
     cin>> s;
 
     //pre compute
-    int hash[256] = {0};
+    int hash[256] = {0}; //ASCII
     for(int i = 0; i<s.size(); i++){
-        hash[s[i]]++;
+        hash[s[i] - 'a']++; //for A capital only s[i]
     }
 
     int q;
