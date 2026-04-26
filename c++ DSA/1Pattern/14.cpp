@@ -2,7 +2,7 @@
 using namespace std;
 void print14(int n){
   
-    for(int i=1;i<=n;i++){
+    for(int i=0;i<=n;i++){
         for(char ch = 'A'; ch<='A' +i; ch++){
             cout<<  ch <<" ";
             
