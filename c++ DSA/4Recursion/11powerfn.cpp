@@ -12,5 +12,6 @@ int main (){
     int n;
     cout << "Enter power : ";
     cin >> n; 
+    cout << pow(a,n);
     return 0;
 }
