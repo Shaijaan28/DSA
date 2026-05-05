@@ -21,7 +21,7 @@ int secondlargest(vector<int> &a, int n){
 }
 int secondSmallest(vector<int> &a, int n){
     int smallest = a[0];
-    int ssmallest = INT_MAX;
+    int ssmallest = INT_MAX; // maximum value
     for(int i =0 ;i<n ;i++){
         if(a[i] < smallest){
         ssmallest = smallest ;

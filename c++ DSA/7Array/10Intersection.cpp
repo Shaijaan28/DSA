@@ -27,7 +27,7 @@ vector <int> IntersectionArray(vector<int> &A, int n, vector<int> &B, int m){
             j++;
         }
         else{
-            ans.push_back(a[i]);
+            ans.push_back(A[i]);
             i++;
             j++;
         }

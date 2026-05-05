@@ -8,7 +8,7 @@ student[0] = "shaijaan"
 print(student)
 print(marks[1:4])
 
-#list method
+#list methods
 
 list = [2,5,7,8]
 list.append(9)
