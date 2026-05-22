@@ -1,5 +1,5 @@
 print("shaijaan")
-name = "rauf"
+name = "mazizxdx"
 age = 23
 price = 58.36
 a= None

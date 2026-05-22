@@ -4,7 +4,7 @@ print(marks)
 print(type(marks))
 print(marks[0])
 student = ["Rauf" , 32.4, "Dhanbad  "]
-student[0] = "shaijaan"
+student[0] = "subul"
 print(student)
 print(marks[1:4])
 
