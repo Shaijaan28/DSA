@@ -36,7 +36,7 @@ vector<int> moveZeros(int n , vector<int> a){
             j++;
         }
     }
-}
+}// unable to understand now
 int main (){
     int n ;
     cout << "Enter size of array ";

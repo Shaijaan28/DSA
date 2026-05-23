@@ -1,28 +1,20 @@
-#include<bits/stdc++.h> // largest element in array
-#include<vector>
+#include<bits/stdc++.h>
 using namespace std;
-int largestElement(vector<int> &arr, int n){
-    int largest = arr[0];
-    for(int i =0; i<n ;i++){
-        if(arr[i] > largest){
-            largest = arr[i];
-
-        }
+int appearsTwice(vector<int> arr, int n){
+    int xorr =0;
+    for(int i=0;i<n;i++){
+        xorr = arr[i]^xorr;
     }
-    return largest;
+    return xorr;
 }
-//noisjoix
-
+ 
 int main (){
-    int n ;
-    cout << "size of the array : ";
+    int n;
     cin >> n;
-
-    vector<int> arr(n);
-    for(int i =0 ;i<n; i++){
+    vector <int> arr(n);
+    for(int i=0;i<n;i++){
         cin >> arr[i];
     }
-    cout << largestElement(arr , n);
-
+  cout << appearsTwice(arr,n);
     return 0;
 }

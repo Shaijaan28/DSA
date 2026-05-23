@@ -10,6 +10,19 @@ int removeDuplicates(vector<int> &arr, int n){
     }
     return i+1;
 }
+vector<int> duplicateElement(vector<int> arr, int n){
+    unordered_map<int,int> freq;
+    vector<int> ans;
+    for(int i=0;i<n;i++){
+        freq[arr[i]]++;
+    }
+    for(auto it : freq){
+    if(it.second>1){
+        ans.push_back(it.second);
+    }
+}
+return ans;
+}
 int main (){
     int n ;
     cin >> n;

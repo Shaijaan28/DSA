@@ -1,23 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
-// int appearsTwice(vector<int> &arr){
-//    int xorr = 0;
-//    for(int i=0; i<arr.size(); i++){
-//     xorr = xorr ^ arr[i];
-//    }
-//    return xorr;
-// }
-int appearsTwice(vector<int> &arr, int n){
-   unordered_set<int> st;
-   for(int i=0;i<n;i++){
-    st.insert(arr[i]);
+int appearsTwice(vector<int> &arr,int n){
+   int xorr = 0;
+   for(int i=0; i<n; i++){
+    xorr = xorr ^ arr[i];
    }
-   for(int i=0;i<n;i++){
-    if(st.count(i)==2)
-    return i;
-   }
-   return -1;
+   return xorr;
 }
+
 int main (){
     int n ;
     cin >>n;
