@@ -18,7 +18,7 @@ for(int i=0;i<n;i++){
 //     for(int i=0;i<arr.size();i++){
 //         mpp[arr[i]]++;
 //     }
-//     for(auto : it){
+//     for(auto it: mpp){
 //         if(it.second > (arr.size()/2)){
 //         return it.first;
 //     }
@@ -26,6 +26,7 @@ for(int i=0;i<n;i++){
 // }
 // }
 
+//optimal moon's voting majority
 int majorityElement(vector<int> arr){
     int cnt =0;
     int el;

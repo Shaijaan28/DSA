@@ -8,6 +8,7 @@ int maximumprofit(int prices[],int n){
         int cost = prices[i]-mini;
         maxProfit = max(maxProfit, cost);
         mini = min(mini,prices[i]);
+        
     }
     return maxProfit;
 }
