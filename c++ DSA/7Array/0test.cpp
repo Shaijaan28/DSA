@@ -1,33 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
-vector<int> arrangElementBySign(vector<int> arr, int n){
- vector<int> ans (n,0);
- int posIndex =0, negIndex =1;
- for(int i=0;i<n;i++){
-    if(arr[i]<0){
-        ans[negIndex] = arr[i];
-        negIndex+=2;
+int majorityElementnby3(vector<int> arr, int n){
+  //  int n = arr.size();
+    map<int,int>mpp;
+    for(int i=0;i<n;i++){
+        mpp[arr[i]]++;
     }
-    else ans[posIndex]=arr[i];
-    posIndex+=2;
- }
- return ans;
+    for(auto it: mpp){
+        if (it.second>n/3) return it.first;
+    }
 }
-
-
- 
 int main (){
-    int n;
+    int n ;
     cin >> n;
     vector <int> arr(n);
     for(int i=0;i<n;i++){
         cin >> arr[i];
     }
-    
-   
+ cout << majorityElementnby3(arr,n);
     return 0;
 }
 
-// for(auto : it){
-//         if(it.second > (arr.size()/2)){
-//         return it.first;
+

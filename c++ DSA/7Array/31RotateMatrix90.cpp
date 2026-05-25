@@ -14,7 +14,6 @@ void rotateMatrix(vector<vector<int>> &mat,int n){
     }
 }
 
-
 int main (){
     int n ;
     cin >>n;
