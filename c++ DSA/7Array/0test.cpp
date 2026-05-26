@@ -1,15 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
-int majorityElementnby3(vector<int> arr, int n){
-  //  int n = arr.size();
-    map<int,int>mpp;
-    for(int i=0;i<n;i++){
-        mpp[arr[i]]++;
+vector<int> MissingAndRepeting(vector<int> arr, int n){
+   int hash[n-1]={0};
+   for(int i=0;i<n;i++){
+    hash[arr[i]]++;
+   }
+   int repeating =-1; int missing =-1;
+   for(int i=0;i<n;i++){
+    if(hash[i]==2) repeating=i;
+    else if(hash[i]==0) missing =1;
+    if(repeating!=-1 && missing !=-1) {
+        break;
     }
-    for(auto it: mpp){
-        if (it.second>n/3) return it.first;
-    }
-}
+   }
+   return{repeating,missing};
+
+} 
 int main (){
     int n ;
     cin >> n;
@@ -17,7 +23,7 @@ int main (){
     for(int i=0;i<n;i++){
         cin >> arr[i];
     }
- cout << majorityElementnby3(arr,n);
+ 
     return 0;
 }
 
