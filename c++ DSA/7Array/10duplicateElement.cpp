@@ -18,7 +18,7 @@ vector<int> duplicateElement(vector<int> arr, int n){
     }
     for(auto it : freq){
     if(it.second>1){
-        ans.push_back(it.second);
+        ans.push_back(it.first);
     }
 }
 return ans;

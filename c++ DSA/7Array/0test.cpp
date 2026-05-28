@@ -1,19 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
-vector<int> MissingAndRepeting(vector<int> arr, int n){
-   int hash[n-1]={0};
-   for(int i=0;i<n;i++){
-    hash[arr[i]]++;
-   }
-   int repeating =-1; int missing =-1;
-   for(int i=0;i<n;i++){
-    if(hash[i]==2) repeating=i;
-    else if(hash[i]==0) missing =1;
-    if(repeating!=-1 && missing !=-1) {
-        break;
+vector<int> duplicateElement(vector<int> arr, int n){
+    unordered_map<int, int> freq;
+    vector<int> ans;
+    for(int i=0;i<n;i++) freq[arr[i]]++;
+
+    for(auto it : freq){
+        if(it.second==1) {
+            ans.push_back(it.first);
+        }
     }
-   }
-   return{repeating,missing};
+    return ans;
+   
 
 } 
 int main (){
