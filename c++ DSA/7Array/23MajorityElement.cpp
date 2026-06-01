@@ -26,7 +26,7 @@ for(int i=0;i<n;i++){
 // }
 // }
 
-//optimal moon's voting majority
+//optimal moore's voting majority
 int majorityElement(vector<int> arr){
     int cnt =0;
     int el;
@@ -44,7 +44,7 @@ int majorityElement(vector<int> arr){
     }
     int cnt1=0;
     for(int i=0;i<arr.size();i++){
-        if(arr[i] == el) cnt ++;
+        if(arr[i] == el) cnt1 ++;
     }
     if(cnt1> (arr.size()/2)){
         return el;

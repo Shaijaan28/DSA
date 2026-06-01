@@ -35,7 +35,7 @@ pair<int,int> firstAndLastPosition(vector<int> &arr, int n, int k){
     int lb = lowerBound(arr,n,k);
     if(lb==n||arr[lb]!=k) return {-1,-1};
     return {lb,upperBound(arr,n,k)-1};
-    // complete the video......
+  
 }
 
 // Without using lb and ub
