@@ -5,6 +5,7 @@ vector<int> duplicateElement(vector<int> arr, int n){
     vector<int> ans;
     for(int i=0;i<n;i++) freq[arr[i]]++;
 
+
     for(auto it : freq){
         if(it.second==1) {
             ans.push_back(it.first);
