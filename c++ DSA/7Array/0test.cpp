@@ -1,28 +1,30 @@
 #include<bits/stdc++.h>
 using namespace std;
-vector<int> duplicateElement(vector<int> arr, int n){
-    unordered_map<int, int> freq;
-    vector<int> ans;
-    for(int i=0;i<n;i++) freq[arr[i]]++;
-
-
-    for(auto it : freq){
-        if(it.second==1) {
-            ans.push_back(it.first);
+int FirstMissingPositive(vector<int> nums){
+    int n = nums.size();
+    map<int,int>mpp;
+    for(int x : nums){
+        if(x>=1 && x <= n){
+            mpp[x]++;
         }
     }
-    return ans;
-   
-
-} 
+    for(int i=0;i<n;i++){
+        if(mpp.find(i)==mpp.end()){
+            return i;
+        }
+    }
+    return n+1;
+}
 int main (){
     int n ;
     cin >> n;
-    vector <int> arr(n);
+    vector <int> nums(n);
     for(int i=0;i<n;i++){
-        cin >> arr[i];
+        cin >> nums[i];
     }
- 
+    
+   
+   
     return 0;
 }
 
