@@ -1,20 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
-int FirstMissingPositive(vector<int> nums){
-    int n = nums.size();
-    map<int,int>mpp;
-    for(int x : nums){
-        if(x>=1 && x <= n){
-            mpp[x]++;
-        }
-    }
+int longestconsseq(vector<int> nums , int n){
+    int cnt =0;
+    int longest =0;
+    if(n==0)return 0;
+    unordered_set<int> st;
     for(int i=0;i<n;i++){
-        if(mpp.find(i)==mpp.end()){
-            return i;
-        }
+        st.insert(nums[i]);
     }
-    return n+1;
+    for(auto it : st){
+        if(st.find(it-1)==st.end()){
+            cnt+=1;
+            int x =it;
+            while(st.find(x+1)!=st.end()){
+                cnt+=1;
+                x+=1;
+            }
+        }
+        longest = max(longest,cnt);
+    }
+    return longest;
 }
+ 
 int main (){
     int n ;
     cin >> n;
