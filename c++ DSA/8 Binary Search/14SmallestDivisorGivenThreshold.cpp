@@ -18,8 +18,9 @@ int smallestDivisor(vector<int>&arr, int limit){
         else {
             low = mid +1;
         }
-        return low;
+       
     }
+     return low;
 }
 int main (){
 
