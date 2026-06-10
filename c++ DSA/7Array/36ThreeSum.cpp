@@ -22,7 +22,7 @@ vector<vector<int>> triplet(int n, vector<int> &num){
 vector<vector<int>> triplet(int n,vector<int> &num){
  set<vector<int>> st;
  for(int i=0;i<n;i++){
-    set<int> hashset;
+    unordered_set<int> hashset;
     for(int j=i+1;j<n;j++){
         int third = -(num[i]+num[j]);
         if(hashset.find(third)!= hashset.end()){
@@ -36,7 +36,7 @@ vector<vector<int>> triplet(int n,vector<int> &num){
  vector<vector<int>> ans(st.begin(), st.end());
  return ans;
 }
-// optimal   32:00/38:24
+// optimal   22:00/38:24
 int main (){
     int n;
     cin >> n;
