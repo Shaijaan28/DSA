@@ -1,39 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
-int longestconsseq(vector<int> nums , int n){
-    int cnt =0;
-    int longest =0;
-    if(n==0)return 0;
-    unordered_set<int> st;
-    for(int i=0;i<n;i++){
-        st.insert(nums[i]);
-    }
-    for(auto it : st){
-        if(st.find(it-1)==st.end()){
-            cnt+=1;
-            int x =it;
-            while(st.find(x+1)!=st.end()){
-                cnt+=1;
-                x+=1;
-            }
-        }
-        longest = max(longest,cnt);
-    }
-    return longest;
-}
+
  
 int main (){
-    int n ;
-    cin >> n;
-    vector <int> nums(n);
-    for(int i=0;i<n;i++){
-        cin >> nums[i];
-    }
-    for(int i =0;i<n;i++){
-        cout << nums[i];
-    }
-   
-   
+  
+    char ch = '(';
+    cout << (int)ch;
     return 0;
 }
 
