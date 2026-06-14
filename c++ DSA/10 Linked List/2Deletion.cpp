@@ -41,10 +41,73 @@ Node* removesHead(Node* head){
     delete temp;
     return head;
 }
-//12:37--
+//Remove tail
+Node* removeTail(Node* head){
+    if(head==NULL || head->next == NULL) return NULL;
+
+    Node* temp = head;
+    while(temp->next->next != NULL){
+        temp = temp -> next;
+    }
+    delete temp -> next;
+    temp->next = nullptr;
+
+    return head;
+}
+//Remove Kth Element
+Node* removeK(Node* head, int k){
+    if(head == NULL) return head;
+    if(k==1){
+        Node* temp = head;
+        head = head->next;
+        free(temp);
+        return head;
+    }
+    int cnt =0;
+    Node* temp = head;
+    Node* prev = NULL;
+    while(temp != NULL){
+        cnt ++;
+        if(cnt == k){
+            prev-> next = prev->next->next;
+            free(temp);
+            break;
+        }
+        prev = temp;
+        temp = temp->next;
+    }
+    return head;
+}
+
+//Remove element depend on the value
+Node* removeEle(Node* head, int el){
+    if(head == NULL) return head;
+    if(head->data==el){
+        Node* temp = head;
+        head = head->next;
+        free(temp);
+        return head;
+    }
+   
+    Node* temp = head;
+    Node* prev = NULL;
+    while(temp != NULL){
+        if(temp->data == el){
+            prev-> next = prev->next->next;
+            free(temp);
+            break;
+        }
+        prev = temp;
+        temp = temp->next;
+    }
+    return head;
+}
 int main (){
     vector<int> arr = {12,23,3,4};
     Node* head = convertArr2LL(arr);
     head = removesHead(head);
+    head = removeTail(head);
+    head = removeK(head,3);
+    head = removeEle(head,23);
     print(head);
 }
