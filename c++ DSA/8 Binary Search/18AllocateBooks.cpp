@@ -12,6 +12,7 @@ int countStudent(vector<int> &nums, int pages){
             pagesStudent = nums[i];
         }
     }
+    return students;
 }
 int findPages(vector<int>&nums, int n , int m){
     if(m>n) return -1;
