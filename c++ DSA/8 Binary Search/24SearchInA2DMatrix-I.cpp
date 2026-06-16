@@ -3,7 +3,7 @@ using namespace std;
 bool searchMatrix(vector<vector<int>>&mat, int target){
     int n = mat.size();
     int m = mat[0].size();
-    int low =0, high = n*m-1;
+    int low =0, high = (n*m)-1;
     while(low<=high){
         int mid = (low+high)/2;
         int row = mid/m;
