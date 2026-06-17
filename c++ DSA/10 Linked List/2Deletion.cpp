@@ -79,7 +79,7 @@ Node* removeK(Node* head, int k){
     return head;
 }
 
-//Remove element depend on the value
+//Remove element depend on the value -> LC -204
 Node* removeEle(Node* head, int el){
     if(head == NULL) return head;
     if(head->data==el){
