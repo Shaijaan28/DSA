@@ -92,7 +92,7 @@ Node* removeKthelement(Node* head, int k){
     front->back = prev;
 
     kNode->next = nullptr;
-    kNode->next = nullptr;
+    kNode->back = nullptr;
     delete kNode;
     return head;
 }
