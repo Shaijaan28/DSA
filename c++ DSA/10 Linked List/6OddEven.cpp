@@ -33,7 +33,7 @@ Node* oddEvenList(Node* head){
         even->next=even->next->next;
 
         odd = odd -> next;
-        even = even -> next->next;
+        even = even -> next;
     }
     odd->next = evenHead;
     return head;   

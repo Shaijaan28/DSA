@@ -31,6 +31,9 @@ Node *addTwoNumbers(Node *num1, Node *num2){
         if(temp2) sum += temp2->data;
         Node* newNode = new Node(sum % 10);
         carry = sum /10;
+        curr-> next = newNode;
+        curr = curr->next;
+
 
         if(temp1) temp1= temp1->next;
         if(temp2) temp2 = temp2->next;
