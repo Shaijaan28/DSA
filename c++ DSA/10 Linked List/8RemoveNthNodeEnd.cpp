@@ -23,14 +23,19 @@ Node* removeNthNode(Node* head, int n){
     Node* fast = head;
     Node* slow  = head;
     for(int i=0;i<n;i++) fast = fast->next;
-    if(fast == NULL) return head->next;
+    if(fast == NULL) {
+        Node* temp = head;
+        head = head->next;
+        delete(temp);
+        return head->next;
+    }
     while(fast->next != NULL){
         fast = fast->next;
         slow = slow->next;
     }
     Node* delNode = slow->next;
     slow->next = slow->next->next;
-    free(delNode);
+    delete(delNode);
     return head;
 }
 int main (){
