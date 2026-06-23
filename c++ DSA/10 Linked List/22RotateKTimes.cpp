@@ -43,7 +43,7 @@ Node* rotate(Node *head, int k){
     tail->next = head;
     Node* newLastNode = findNthNode(head, len -k);
     head = newLastNode ->next;
-    newLastNode->next->next=NULL;
+    newLastNode->next=NULL;
     return head;
 
 }

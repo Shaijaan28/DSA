@@ -33,7 +33,7 @@ Node* reverseLinkedList(Node *head){
 Node* getKthNode(Node* temp,int k){
     k-=1;
     while(temp!=NULL && k>0){
-        k--;
+        k--; 
         temp = temp ->next;
     }
     return temp;
