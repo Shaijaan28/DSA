@@ -17,6 +17,7 @@ class Node{
         next = nullptr;     
     }
 };
+// write code and do lc after watch stack and que
 int main (){
     
 }
