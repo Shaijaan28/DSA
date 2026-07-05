@@ -17,7 +17,7 @@ using namespace std;
         }
 
         if (st.empty())
-            return "0";
+            return "0 ";
 
         string res = "";
 
