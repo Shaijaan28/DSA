@@ -9,7 +9,7 @@ vector<int> asteroidCollision(vector<int>& asteroids){
 
             if(!st.empty() && st.back()==abs(asteroids[i])) st.pop_back();
 
-            else if(st.empty() || st.back()<0) st.push_back(asteroids[i]);
+            else if(st.empty()|| st.back()<0) st.push_back(asteroids[i]);
         }
     }
     vector<int> ans;
