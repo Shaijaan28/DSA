@@ -32,7 +32,7 @@ vector<int> findNSE(vector<int> &arr) {
     vector<int> nse(n);
     stack<int> st;
 
-    for (int i = n-1; i >= 0; i--) {
+    for (int i =n-1; i >= 0; i--) {
 
         while (!st.empty() && st.top() >= arr[i]) {
             st.pop();
