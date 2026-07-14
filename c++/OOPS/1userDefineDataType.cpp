@@ -6,6 +6,7 @@ public:
     int rno;
     float gpa;
 };
+
 int main (){
     Student s1 ;
     s1.name ="Rauf";
