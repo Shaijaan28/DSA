@@ -21,8 +21,7 @@ public:
 int main (){
     Cricketer c1("Virat",25000,52.3);
     Cricketer c2("Babar",8000,50.1);
-
+    
     Cricketer* p1 =&c1;
     cout<<(*p1).runs<<endl;
-  
 }
