@@ -40,23 +40,18 @@ public:
     void remove(){
         if(size==0){
             cout<<"Array is Empty"<<endl;
-            return -1;
-        }
+         }
         size--;
     }
 };
 int main (){
     Vector v;
-cout<<v.size<<" "<<v.capacity<<endl;
     v.add(10);
     v.print();
-cout<<v.size<<" "<<v.capacity<<endl;
     v.add(15);
     v.print();
-   cout<<v.size<<" "<<v.capacity<<endl; 
     v.add(7);
     v.print();
-   cout<<v.size<<" "<<v.capacity<<endl; 
-
+ 
    cout<<v.get(1)<<endl;
 }
