@@ -13,7 +13,7 @@ public:
     void add(int ele){
         if(size == capacity){
             capacity*=2;
-            int* arr2 = new int[capacity];
+            int* arr2 = new  int[capacity];
             for(int i=0;i<size;i++){
                 arr2[i]=arr[i];
             }
